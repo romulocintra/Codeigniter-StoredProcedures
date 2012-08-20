@@ -13,13 +13,13 @@ You can either autoload the library from within the autoload.php file or just lo
 
 The syntax is pretty straight-forward:
 
-    $sp_name = 'SaveContactImportHeader';
+    $sp_name = 'FuBar';
     $para = array(
-                    'in_SystemUserID' => $client->system_user_id,
-                    'in_FieldNameString' => $db_data1,
-                    'in_isTestFlag' => $is_test
+                    'in_SystemUserID' => '1',
+                    'in_FieldNameString' => 'Some string of data that means something',
+                    'in_Parameter3' => 'Another parameter value'
                     );
-    $out = '@out_ContactImportHeaderId';
+    $out = '@out_SendMeAllTheDatas';
     
     $query = $this->sp->run($para,$sp,$out);
     $id = $query->$out;
